@@ -7,7 +7,36 @@
 </head>
 <body>
     
-    <button id="btn">Click me to load</button>
+    <!-- общий блок с катом -->
+  <div onclick="makeCat('divCat')" class="box">
+    <!-- блок с названием ката -->
+    <h2>Кат: как работает кат на JavaScript</h2>
+    <!-- скрытый блок, который появится при нажатии -->
+    <div id = "divCat" style="display: none">
+      <!-- сюда можно вставлять любое содержимое с любой сложностью вёрстки -->
+      <ul>
+          <li>Lipsum dolor sit amet consectetur adipisicing elit. Labore vero explicabo quo, sunt nobis iusto. </li> 
+          <li>Fugiat delectus hic explicabo eum, nobis cupiditate impedit praesentium veritatis rerum excepturi. </li> 
+        <li>Laboriosam, dolore doloremque!</li>
+      </ul>
+      
+    </div>
+  </div>
+  
+  <button id="btn">Click me to load</button>
+
+  <!-- скрипт, который раскрывает и закрывает кат -->
+<script type= "text/javascript">
+
+    function makeCat(type){
+    // получаем доступ к блоку, который нужно показать при нажатии
+    param=document.getElementById(type);
+    // если его нет на экране — показываем
+    if(param.style.display == "none") param.style.display = "block";
+    // иначе — скрываем
+    else param.style.display = "none"
+    }
+  </script>
 
 </body>
 </html>

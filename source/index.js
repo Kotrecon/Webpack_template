@@ -1,7 +1,7 @@
 "use strict";
 
 import "../styles/style.css";
-import "../styles/style.scss";
+//import "../styles/style.scss";
 
 const getTodos = () => import(/* webpackChunkName: "postsAPI" */ "./api");
 
